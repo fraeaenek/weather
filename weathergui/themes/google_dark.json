@@ -1,0 +1,69 @@
+{
+  "CTk": {
+    "fg_color": ["#121212", "#121212"],
+    "top_fg_color": ["#121212", "#121212"],
+    "border_color": ["#121212", "#121212"],
+    "text_color": ["#FFFFFF", "#FFFFFF"],
+    "text_color_disabled": ["#8A8A8A", "#8A8A8A"]
+  },
+
+  "CTkFont": {
+    "family": "Inter",
+    "size": 14,
+    "weight": "normal"
+  },
+
+  "CustomFonts": {
+    "title": { "family": "Inter", "size": 28, "weight": "bold" },
+    "city":  { "family": "Inter", "size": 22, "weight": "bold" },
+    "temp":  { "family": "Inter", "size": 52, "weight": "bold" },
+    "desc":  { "family": "Inter", "size": 18, "weight": "normal" },
+    "advice":{ "family": "Inter", "size": 16, "weight": "normal" },
+    "entry": { "family": "Inter", "size": 16, "weight": "normal" },
+    "button":{ "family": "Inter", "size": 16, "weight": "bold" }
+  },
+
+  "CTkLabel": {
+    "fg_color": ["transparent", "transparent"],
+    "corner_radius": 0,
+    "border_width": 0,
+    "text_color": ["#FFFFFF", "#FFFFFF"],
+    "text_color_disabled": ["#8A8A8A", "#8A8A8A"],
+    "font": { "family": "Inter", "size": 16, "weight": "normal" }
+  },
+
+  "CTkButton": {
+    "corner_radius": 14,
+    "border_width": 0,
+    "fg_color": ["#8AB4F8", "#8AB4F8"],
+    "hover_color": ["#5F8FE8", "#5F8FE8"],
+    "border_color": ["#8AB4F8", "#8AB4F8"],
+    "text_color": ["#000000", "#000000"],
+    "text_color_disabled": ["#7A7A7A", "#7A7A7A"],
+    "font": { "family": "Inter", "size": 16, "weight": "bold" }
+  },
+
+  "CTkEntry": {
+    "corner_radius": 14,
+    "border_width": 0,
+    "fg_color": ["#2A2A2A", "#2A2A2A"],
+    "border_color": ["#2A2A2A", "#2A2A2A"],
+    "text_color": ["#FFFFFF", "#FFFFFF"],
+    "placeholder_text_color": ["#9E9E9E", "#9E9E9E"],
+    "font": { "family": "Inter", "size": 16, "weight": "normal" }
+  },
+
+  "CTkFrame": {
+    "corner_radius": 20,
+    "border_width": 0,
+    "fg_color": ["#1A1A1A", "#1A1A1A"],
+    "border_color": ["#1E1E1E", "#1E1E1E"],
+    "text_color": ["#FFFFFF", "#FFFFFF"],
+    "text_color_disabled": ["#8A8A8A", "#8A8A8A"]
+  },
+  "TextColors": {
+  "primary": "#FFFFFF",
+  "secondary": "#CFCFCF",
+  "tertiary": "#9E9E9E"
+}
+}
