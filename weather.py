@@ -31,8 +31,8 @@ ICONS = {
 
 # API
 load_dotenv()
-API_KEY = os.getenv('API_KEY')
-BASE_URL = os.getenv('BASE_URL')
+API_KEY = os.getenv('YOUR_API_KEY')
+BASE_URL = 'https://api.openweathermap.org/data/2.5/weather'
 
 # FUNCTIONS
     
