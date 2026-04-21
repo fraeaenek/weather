@@ -1,13 +1,34 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 import os
 from dotenv import load_dotenv
 import requests
 from pathlib import Path
 
-env_path = Path(__file__).parent / ".env"
+env_path = Path(__file__).parent / '.env'
 load_dotenv(dotenv_path=env_path)
 
 app = FastAPI()
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+STATIC_DIR = os.path.join(BASE_DIR, 'static')
+INDEX_FILE = os.path.join(STATIC_DIR, "index.html")
+
+app.mount('/static', StaticFiles(directory=STATIC_DIR), name='static')
+
+@app.get('/')
+def root():
+    return FileResponse(INDEX_FILE)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=['*'],
+    allow_credentials=True,
+    allow_methods=['*'],
+    allow_headers=['*'],
+)
 
 API_KEY = os.getenv('API_KEY')
 
@@ -33,11 +54,11 @@ def get_weather(city: str):
 
     filtered = {
         'city': data['name'],
-        'temperature': data['main']['temp'],
+        'temperature': round(data['main']['temp']),
         'description': data['weather'][0]['description'],
         'icon': data['weather'][0]['icon'],
         'humidity': data['main']['humidity'],
-        'wind_speed': data['wind']['speed']
+        'wind': data['wind']['speed']
     }
 
     return filtered
